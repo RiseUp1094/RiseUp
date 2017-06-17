@@ -47,7 +47,7 @@ public:
 	int max(int, int);
 	int nonodes(nodeptr);
 };
-// Вставка узла
+// Г‚Г±ГІГ ГўГЄГ  ГіГ§Г«Г 
 void bstree::insert(int x, nodeptr &p)
 {
 	
@@ -97,7 +97,7 @@ void bstree::insert(int x, nodeptr &p)
 		}
 		else
 		{
-			cout << "Элемет существует\n" << endl;
+			cout << "ГќГ«ГҐГ¬ГҐГІ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ\n" << endl;
 		}
 	}
 	int m, n, d;
@@ -107,13 +107,13 @@ void bstree::insert(int x, nodeptr &p)
 	p->height = d + 1;
 	
 }
-// Нахождение минимума
+// ГЌГ ГµГ®Г¦Г¤ГҐГ­ГЁГҐ Г¬ГЁГ­ГЁГ¬ГіГ¬Г 
 nodeptr bstree::findmin(nodeptr p)
 {
 	
 	if (p == NULL)
 	{
-		cout << "В дереве нет элементов\n" << endl;
+		cout << "Г‚ Г¤ГҐГ°ГҐГўГҐ Г­ГҐГІ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў\n" << endl;
 		return p;
 	}
 	else
@@ -127,13 +127,13 @@ nodeptr bstree::findmin(nodeptr p)
 	}
 	
 }
-// Нахождение максимума
+// ГЌГ ГµГ®Г¦Г¤ГҐГ­ГЁГҐ Г¬Г ГЄГ±ГЁГ¬ГіГ¬Г 
 nodeptr bstree::findmax(nodeptr p)
 {
 	
 	if (p == NULL)
 	{
-		cout << "В дереве нет элементов\n" << endl;
+		cout << "Г‚ Г¤ГҐГ°ГҐГўГҐ Г­ГҐГІ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў\n" << endl;
 		return p;
 	}
 	else
@@ -147,13 +147,13 @@ nodeptr bstree::findmax(nodeptr p)
 	}
 	
 }
-// Поиск элемента
+// ГЏГ®ГЁГ±ГЄ ГЅГ«ГҐГ¬ГҐГ­ГІГ 
 void bstree::find(int x, nodeptr &p)
 {
 	
 	if (p == NULL)
 	{
-		cout << "Простите, но такого элемента нет\n" << endl;
+		cout << "ГЏГ°Г®Г±ГІГЁГІГҐ, Г­Г® ГІГ ГЄГ®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г­ГҐГІ\n" << endl;
 	}
 	else
 	{
@@ -169,20 +169,20 @@ void bstree::find(int x, nodeptr &p)
 			}
 			else
 			{
-				cout << "Элемент, который вы искали есть в дереве!\n" << endl;
+				cout << "ГќГ«ГҐГ¬ГҐГ­ГІ, ГЄГ®ГІГ®Г°Г»Г© ГўГ» ГЁГ±ГЄГ Г«ГЁ ГҐГ±ГІГј Гў Г¤ГҐГ°ГҐГўГҐ!\n" << endl;
 			}
 		}
 	}
 	
 }
-// Копирование 
+// ГЉГ®ГЇГЁГ°Г®ГўГ Г­ГЁГҐ 
 void bstree::copy(nodeptr &p, nodeptr &p1)
 {
 	makeempty(p1);
 	p1 = nodecopy(p);
 }
 
-// Опустошение дерева
+// ГЋГЇГіГ±ГІГ®ГёГҐГ­ГЁГҐ Г¤ГҐГ°ГҐГўГ 
 void bstree::makeempty(nodeptr &p)
 {
 	nodeptr d;
@@ -196,7 +196,7 @@ void bstree::makeempty(nodeptr &p)
 	}
 }
 
-// Копирование узлов
+// ГЉГ®ГЇГЁГ°Г®ГўГ Г­ГЁГҐ ГіГ§Г«Г®Гў
 nodeptr bstree::nodecopy(nodeptr &p)
 {
 	
@@ -215,13 +215,13 @@ nodeptr bstree::nodecopy(nodeptr &p)
 	}
 	
 }
-// Удаление узла
+// Г“Г¤Г Г«ГҐГ­ГЁГҐ ГіГ§Г«Г 
 void bstree::del(int x, nodeptr &p)
 {
 	nodeptr d;
 	if (p == NULL)
 	{
-		cout << "Простите, но такого элемента нет\n" << endl;
+		cout << "ГЏГ°Г®Г±ГІГЁГІГҐ, Г­Г® ГІГ ГЄГ®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г­ГҐГІ\n" << endl;
 	}
 	else if (x < p->element)
 	{
@@ -236,21 +236,21 @@ void bstree::del(int x, nodeptr &p)
 		d = p;
 		free(d);
 		p = NULL;
-		cout << "Элемент удален\n" << endl;
+		cout << "ГќГ«ГҐГ¬ГҐГ­ГІ ГіГ¤Г Г«ГҐГ­\n" << endl;
 	}
 	else if (p->left == NULL)
 	{
 		d = p;
 		free(d);
 		p = p->right;
-		cout << "Элемент удален\n" << endl;
+		cout << "ГќГ«ГҐГ¬ГҐГ­ГІ ГіГ¤Г Г«ГҐГ­\n" << endl;
 	}
 	else if (p->right == NULL)
 	{
 		d = p;
 		p = p->left;
 		free(d);
-		cout << "Элемент удален\n" << endl;
+		cout << "ГќГ«ГҐГ¬ГҐГ­ГІ ГіГ¤Г Г«ГҐГ­\n" << endl;
 	}
 	else
 	{
@@ -262,7 +262,7 @@ int bstree::deletemin(nodeptr &p)
 {
 	
 	int c;
-	cout << "Выбрано удаление минимального значения\n" << endl;
+	cout << "Г‚Г»ГЎГ°Г Г­Г® ГіГ¤Г Г«ГҐГ­ГЁГҐ Г¬ГЁГ­ГЁГ¬Г Г«ГјГ­Г®ГЈГ® Г§Г­Г Г·ГҐГ­ГЁГї\n" << endl;
 	if (p->left == NULL)
 	{
 		c = p->element;
@@ -335,7 +335,7 @@ int bstree::bsheight(nodeptr p)
 	}
 }
 
-//Малое левое вращение 
+//ГЊГ Г«Г®ГҐ Г«ГҐГўГ®ГҐ ГўГ°Г Г№ГҐГ­ГЁГҐ 
 nodeptr bstree::srl(nodeptr &p1)
 {
 	
@@ -350,7 +350,7 @@ nodeptr bstree::srl(nodeptr &p1)
 
 }
 
-//Малое правое вращение
+//ГЊГ Г«Г®ГҐ ГЇГ°Г ГўГ®ГҐ ГўГ°Г Г№ГҐГ­ГЁГҐ
 nodeptr bstree::srr(nodeptr &p1)
 {
 	
@@ -363,7 +363,7 @@ nodeptr bstree::srr(nodeptr &p1)
 	
 	return p2;
 }
-// Большое левое вращение
+// ГЃГ®Г«ГјГёГ®ГҐ Г«ГҐГўГ®ГҐ ГўГ°Г Г№ГҐГ­ГЁГҐ
 nodeptr bstree::drl(nodeptr &p1)
 {
 	
@@ -373,7 +373,7 @@ nodeptr bstree::drl(nodeptr &p1)
 
 }
 
-// Большое правое вращение
+// ГЃГ®Г«ГјГёГ®ГҐ ГЇГ°Г ГўГ®ГҐ ГўГ°Г Г№ГҐГ­ГЁГҐ
 nodeptr bstree::drr(nodeptr &p1)
 {
 	
